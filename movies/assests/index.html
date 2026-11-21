@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFree</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body style="background-color: black;">
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+
+    
+        <div class="w-100 text-center py-2">
+            <h2 class="cinefree-logo text-info">CineFree</h2>
+            <p class="tagline">Your World of Movies & Series</p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="d-flex justify-content-center align-items-center flex-wrap w-100">
+
+            <a class="navbar-brand" href="#home">
+                <img src="../images/home.png" alt="">
+                <span class="nav1">Home</span>
+            </a>
+
+            <a class="navbar-brand" href="#movies">
+                <img src="../images/film.png" alt="">
+                <span class="nav1">Popular Movies</span>
+            </a>
+
+            <a class="navbar-brand" href="#movies1">
+                <img src="../images/film.png" alt="">
+                <span class="nav1">Telugu Movies</span>
+            </a>
+
+            <a class="navbar-brand" href="#animeMovies">
+                <img src="../images/cartoon.png" alt="">
+                <span class="nav1">Anime Movies</span>
+            </a>
+
+            <a class="navbar-brand" href="#animeseries">
+                <img src="../images/film.png" alt="">
+                <span class="nav1">Anime Series</span>
+            </a>
+
+            <a class="navbar-brand" href="#fullTeluguMovies">
+                <img src="../images/video-player.png" alt="">
+                <span class="nav1">Telugu Full Movies</span>
+            </a>
+
+            <a class="navbar-brand" href="#asianSection">
+                <img src="../images/film.png" alt="">
+                <span class="nav1">Asian Series</span>
+            </a>
+
+            <a class="navbar-brand" href="#">
+                <img src="../images/smiling.png" alt="">
+                <span class="nav1">My Space</span>
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gHoJSbBNtYQ?si=wI_zo6KumdFP-qz3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Welcome to CineFree</h5>
+            <p>Watch trailers and free movies.</p>
+        </div>
+    </div>
+    <div class="carousel-item">
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/aq9OEGXn-JQ?si=1yTGk43o6t9DtS93" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <div class="carousel-caption d-none d-md-block">
+            <h5>New Trailers</h5>
+            <p>See the latest movie trailers.</p>
+        </div>
+    </div>
+    <div class="carousel-item">
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/EaODp3C7wkU?si=lelJr90x6WUzPj5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Free Movies</h5>
+            <p>Classic movies you can watch for free.</p>
+        </div>
+    </div>
+ <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<div class="main-content">
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search movies...">
+        <button id="searchBtn">Search</button>
+    </div>
+<div class="movie-section">
+    <div class="section-heading">
+        <h2>Popular Movies</h2>
+        <button id="viewAllBtn">View All →</button>
+    </div>
+    <div id="movies" class="movie-container">
+    </div>
+
+</div>
+<div class="movie-section1">
+    <div class="section-heading1">
+        <h2>Free Telugu Movies</h2>
+        <button id="viewAllBtn1">View All →</button>
+    </div>
+    <div id="movies1" class="movie-container1"></div>
+
+</div>
+<div id="player" style="display:none;">
+    <button onclick="closePlayer()">Close ✖</button>
+    <iframe
+        id="trailer"
+        width="100%"
+        height="450"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+
+</div>
+<div class="movie-section2">
+    <div class="section-heading2">
+        <h2>Anime Movies</h2>
+        <button id="viewAllBtn2">View All →</button>
+    </div>
+<div id="animeMovies" class="movie-container"></div>
+
+
+
+</div>
+<div class="movie-section3">
+    <div class="section-heading3">   
+<h2>Anime Series</h2>    
+        <button id="viewAllBtn3">View All →</button>
+    </div>
+  <div id="animeSeries" class="movie-container"></div>
+
+</div>
+
+<div id="episodeList"></div>
+<h2 class="episode-heading">Episodes</h2>
+<div id="episodeList"></div>
+<section class="movie-section">
+    <div class="section-heading">
+        <h2>Telugu Full Movies</h2>
+    </div>
+    <div class="search-box">
+        <input type="text" id="teluguSearch" placeholder="Search Telugu full movies...">
+        <button id="teluguSearchBtn">Search</button>
+         <button id="viewAllBtn">View All →</button>
+    </div>
+    <div id="fullTeluguMovies" class="movie-container"></div>
+</section>
+<section class="asian-series-section" id="asianSection">
+
+    <div class="section-heading">
+        <h2>Korean & Thai Series</h2>
+    </div>
+    <div id="asianSeries" class="movie-container"></div>
+</section>
+
+
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

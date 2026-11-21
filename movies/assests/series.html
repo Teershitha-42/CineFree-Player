@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFree - Series Episodes</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/series.css">
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <button onclick="history.back()" class="btn btn-secondary mb-3">
+            ← Back
+        </button>
+        <h2 id="seriesTitle">Series Name</h2>
+        <h4 class="mt-4">Episodes</h4>
+        <div id="episodeList" class="episode-container"></div>
+        <div class="player-container mt-4">
+            <div id="playerMessage">
+                Select an episode to watch.
+            </div>
+
+            <iframe
+                id="episodePlayer"
+                allow="autoplay; encrypted-media; fullscreen"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <script src="./js/series.js"></script>
+
+</body>
+</html>

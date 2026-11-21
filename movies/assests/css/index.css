@@ -1,0 +1,308 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #101116;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    width: 80px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #101116 !important;
+    transition: width 0.4s ease;
+    overflow: hidden;
+}
+
+.navbar:hover {
+    width: 220px;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 10px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white !important;
+    font-size: 16px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+.navbar-brand img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+.navbar-brand span {
+    display: none;
+}
+.navbar:hover .navbar-brand span {
+    display: inline;
+}
+/*  Carousel  */
+#carouselExampleControls {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+}
+.carousel-item video,
+.carousel-item iframe {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border: none;
+}
+
+
+
+
+
+
+
+.main-content {
+    margin-left: 80px;
+    padding: 25px;
+    width: calc(100% - 80px);
+    background: #101116;
+    min-height: 100vh;
+    color: white;
+}
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.search-box input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 6px;
+}
+/* Movie Sections*/
+.movie-section,
+.movie-section1,
+.movie-section2,
+.movie-section3 {
+    margin: 30px 0;
+    color: white;
+}
+
+.section-heading,
+.section-heading1,
+.section-heading2,
+.section-heading3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-heading button,
+.section-heading1 button,
+.section-heading2 button,
+.section-heading3 button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+/* Movie Containers */
+/* Normal horizontal sliding */
+#movies,
+#movies1,
+#animeMovies,
+#animeSeries {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 20px 0;
+    padding: 10px;
+    scrollbar-width: none;
+}
+
+#movies::-webkit-scrollbar,
+#movies1::-webkit-scrollbar,
+#animeMovies::-webkit-scrollbar,
+#animeSeries::-webkit-scrollbar {
+    display: none;
+}
+/*  View All */
+
+#movies.show-all,
+#movies1.show-all,
+#animeMovies.show-all,
+#animeSeries.show-all,
+#fullTeluguMovies {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+/*  Movie Cards  */
+.movie-card {
+    flex: 0 0 180px;
+    width: 180px;
+    color: white;
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.movie-card:hover {
+    transform: scale(1.05);
+}
+/*  Movie Images */
+
+.movie-card img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/*  Movie Titles  */
+
+.movie-card h4 {
+    font-size: 14px;
+    padding: 8px;
+    margin: 0;
+}
+/*  Movie Buttons  */
+
+.movie-card button {
+    margin-left: 8px;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e50914;
+    color: white;
+    cursor: pointer;
+}
+/*  Player  */
+#player {
+    display: none;
+    margin-top: 25px;
+}
+
+#player iframe,
+#player video {
+    width: 100%;
+    max-width: 850px;
+    height: 450px;
+    border: none;
+}
+/*  Episode List  */
+
+#episodeList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #151515;
+    border-radius: 10px;
+}
+
+#episodeList button {
+    background-color: #292929;
+    color: white;
+    border: 1px solid #444;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#episodeList button:hover {
+    background-color: #e50914;
+    border-color: #e50914;
+    transform: scale(1.04);
+}
+
+.episode-heading {
+    color: white;
+    margin: 25px 20px 10px;
+}
+/*  Footer */
+
+.credit {
+    margin-top: 30px;
+    font-size: 13px;
+    color: gray;
+}
+/*  Responsive  */
+@media (max-width: 768px) {
+    .movie-card {
+        flex: 0 0 145px;
+        width: 145px;
+    }
+    .movie-card img {
+        height: 210px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .carousel-item video {
+        height: 250px;
+    }
+
+}
+
+#fullTeluguMovies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 20px 0;
+    padding: 10px;
+    scrollbar-width: none;
+}
+
+#fullTeluguMovies .movie-card {
+    flex: 0 0 180px;
+    width: 180px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.movie-section,
+.movie-section1,
+.movie-section2,
+.movie-section3,
+.telugu-full-section {
+    scroll-margin-top: 80px;
+}
+#asianSeries {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px;
+}
+
+#asianSeries .movie-card {
+    flex: 0 0 180px;
+    width: 180px;
+}
