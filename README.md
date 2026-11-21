@@ -45,6 +45,6 @@ TMDB and Jikan APIs provide content information and metadata, not full movie vid
 
 **Kottapalli Teershitha**
 
-## 🎯 Project Purpose
+##  Project Purpose
 
 This project was developed to improve practical skills in frontend web development, JavaScript DOM manipulation, API integration, and responsive website design.
